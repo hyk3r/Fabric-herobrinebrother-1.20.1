@@ -1,5 +1,8 @@
 package com.hyker.herobrinebrother;
 
+import com.hyker.herobrinebrother.block.ModBlocks;
+import com.hyker.herobrinebrother.item.ModItemGroups;
+import com.hyker.herobrinebrother.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -11,6 +14,10 @@ public class HerobrineBrother implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world! Mod is Running");
+		ModItemGroups.registerItemGroups();
+
+
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
